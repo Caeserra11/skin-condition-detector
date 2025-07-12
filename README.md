@@ -32,4 +32,3 @@ A simple Gradio web app that **analyzes skin images** and predicts conditions li
 - [ ] Support more skin conditions  
 
 ---
-**Note**: This was my **first GitHub project**! 🎉  

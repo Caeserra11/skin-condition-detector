@@ -1,0 +1,39 @@
+import gradio as gr
+import cv2
+import numpy as np
+from PIL import Image
+import tensorflow as tf  # or whatever framework you used
+
+# Load your model (adjust this based on how your model is saved)
+# If your model is in Colab, you can load it directly here
+# model = tf.keras.models.load_model('your_model.h5')
+
+def predict_skin_condition(image):
+    # Preprocess the image (adjust based on your model's requirements)
+    image = np.array(image)
+    image = cv2.resize(image, (224, 224))  # example size
+    image = image / 255.0  # example normalization
+    image = np.expand_dims(image, axis=0)
+
+    # Get prediction (replace with your actual model call)
+    # prediction = model.predict(image)
+    # For demo purposes, we'll use mock predictions
+    prediction = {
+        'Eczema': 0.76,
+        'Acne': 0.23,
+        'Normal': 0.01
+    }
+
+    return prediction
+
+# Create the Gradio interface
+iface = gr.Interface(
+    fn=predict_skin_condition,
+    inputs=gr.Image(type="pil", label="Upload skin image"),
+    outputs=gr.Label(num_top_classes=3, label="Prediction"),
+    title="Skin Condition Detector",
+    description="Upload an image to detect eczema or acne",
+    examples=["example1.jpg", "example2.jpg"]  # add example images if available
+)
+
+iface.launch()

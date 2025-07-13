@@ -18,7 +18,6 @@ A Gradio-based web app for detecting skin conditions (Eczema/Normal) using the H
 pip install -r requirements.txt
 python app.py
 ```
-*Note: The original development notebook is available in [Colab](link-to-colab).*
 
 ---
-Developed as part of my Computer Engineering studies.  
+

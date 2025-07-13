@@ -1,34 +1,24 @@
-# **Skin Condition Detector** 👨‍⚕️  
+# Skin Condition Detector 🩺
 
-A simple Gradio web app that **analyzes skin images** and predicts conditions like eczema or acne.  
+A Gradio-based web app for detecting skin conditions (Eczema/Normal) using the HAM10000 dataset.  
+**Developed in Google Colab** → [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/your-username/repo-name/blob/main/skin_detector.ipynb)
 
-## **Features** ✨  
-- Upload a skin image for analysis  
-- **Mock predictions** (ready for real ML model integration)  
-- User-friendly interface  
+## Features
+- Image classification with a CNN model
+- Simple Gradio interface
+- HAM10000 dataset adaptation
 
-## **How to Run** 🚀  
-1. Clone this repo:  
-   ```bash
-   git clone https://github.com/your-username/skin-condition-detector.git
-   ```  
-2. Install dependencies:  
-   ```bash
-   pip install -r requirements.txt
-   ```  
-3. Launch the app:  
-   ```bash
-   python app.py
-   ```  
-   *(The app will open at `http://localhost:7860`)*  
+## How It Was Built
+- **Environment**: Google Colab (GPU runtime)  
+- **Framework**: TensorFlow/Keras  
+- **Interface**: Gradio  
 
-## **Tech Stack** ⚙️  
-- Python  
-- Gradio (for the UI)  
-- OpenCV (image processing)  
-
-## **Future Improvements** 🔮  
-- [ ] Add a trained ML model  
-- [ ] Support more skin conditions  
+## Run Locally
+```bash
+pip install -r requirements.txt
+python app.py
+```
+*Note: The original development notebook is available in [Colab](link-to-colab).*
 
 ---
+Developed as part of my Computer Engineering studies.  
